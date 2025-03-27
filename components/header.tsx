@@ -67,7 +67,7 @@ export default function Header({ onFeaturesClick, onComparisonClick, onReviewsCl
             Reviews
           </button>
           <motion.button
-            onClick={() => window.location.href = '/product'}
+            onClick={onBuyClick}
             className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
               isScrolled ? "bg-teal-500 text-white hover:bg-teal-600" : "bg-white text-gray-900 hover:bg-gray-100"
             }`}
@@ -98,37 +98,25 @@ export default function Header({ onFeaturesClick, onComparisonClick, onReviewsCl
         >
           <div className="px-4 py-5 space-y-4">
             <button
-              onClick={() => {
-                onFeaturesClick()
-                setIsMobileMenuOpen(false)
-              }}
+              onClick={onFeaturesClick}
               className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg"
             >
               Features
             </button>
             <button
-              onClick={() => {
-                onComparisonClick()
-                setIsMobileMenuOpen(false)
-              }}
+              onClick={onComparisonClick}
               className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg"
             >
               Comparison
             </button>
             <button
-              onClick={() => {
-                onReviewsClick()
-                setIsMobileMenuOpen(false)
-              }}
+              onClick={onReviewsClick}
               className="block w-full text-left px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg"
             >
               Reviews
             </button>
             <button
-              onClick={() => {
-                window.location.href = '/product'
-                setIsMobileMenuOpen(false)
-              }}
+              onClick={onBuyClick}
               className="block w-full text-center px-4 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600"
             >
               Buy Now
