@@ -399,6 +399,42 @@ export default function ProductPage() {
           </div>
         </div>
 
+        {/* Product Description */}
+        <section className="py-16 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">Product Description</h2>
+              <div className="prose prose-lg mx-auto">
+                <p>
+                  The TrekTight is a revolutionary travel companion that combines the functionality of a backpack with the convenience of a fanny pack. Its innovative design features a detachable fanny pack that seamlessly integrates with the main backpack, offering unparalleled versatility for modern travelers.
+                </p>
+                <p>
+                  The main backpack provides ample storage space with multiple compartments, while the detachable fanny pack offers quick access to essential items. The TrekTight's ergonomic design ensures comfort during extended wear, and its durable materials make it perfect for any adventure.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* See TrekTight in Action */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">See TrekTight in Action</h2>
+              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+                <video
+                  src="/products/action/bpcinema(2).mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Tabbed Product Info Section */}
         <div className="mb-12 sm:mb-16">
           <Tabs defaultValue="description">

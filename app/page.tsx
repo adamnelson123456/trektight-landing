@@ -95,13 +95,21 @@ export default function Home() {
       {/* Hero Section */}
       <div ref={heroRef} className="relative flex h-screen w-full items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <iframe
-            src="https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=dikovux5f0mfcyc9ayjk&profile=cld-default"
-            className="w-full h-full"
-            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-            allowFullScreen
-            style={{ border: 'none' }}
-          />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2 }}
+            className="relative w-full max-w-lg aspect-square"
+          >
+            <video
+              src="/products/hero/bpcinema(4).mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="w-full h-full object-cover rounded-lg shadow-lg"
+            />
+          </motion.div>
         </div>
         <div className="absolute inset-0 bg-black/30 z-10"></div>
 
