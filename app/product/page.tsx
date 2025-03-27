@@ -380,24 +380,8 @@ export default function ProductPage() {
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
               >
-                Add to Cart
+                Buy Now
               </motion.button>
-            </div>
-
-            {/* Trust Badges */}
-            <div className="grid grid-cols-3 gap-2 sm:gap-4 mb-5 sm:mb-6">
-              <div className="flex flex-col items-center text-center">
-                <Truck className="h-5 w-5 sm:h-6 sm:w-6 text-gray-600 mb-1 sm:mb-2" />
-                <span className="text-xs text-gray-600">Free Shipping</span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <ShieldCheck className="h-5 w-5 sm:h-6 sm:w-6 text-gray-600 mb-1 sm:mb-2" />
-                <span className="text-xs text-gray-600">30-Day Guarantee</span>
-              </div>
-              <div className="flex flex-col items-center text-center">
-                <CreditCard className="h-5 w-5 sm:h-6 sm:w-6 text-gray-600 mb-1 sm:mb-2" />
-                <span className="text-xs text-gray-600">Secure Checkout</span>
-              </div>
             </div>
           </div>
         </div>
@@ -437,46 +421,6 @@ export default function ProductPage() {
           </div>
         </section>
 
-        {/* The Ultimate Travel Companion */}
-        <section className="py-16 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">The Ultimate Travel Companion</h2>
-              <div className="prose prose-lg mx-auto">
-                <p>
-                  Experience unparalleled versatility with TrekTight's innovative features:
-                </p>
-                <ul>
-                  <li>Expandable design that adapts to your needs</li>
-                  <li>Premium waterproof materials</li>
-                  <li>Ergonomic comfort for extended wear</li>
-                  <li>Multiple secure compartments</li>
-                  <li>Built-in USB charging port</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* See TrekTight in Action */}
-        <section className="py-16 bg-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">See TrekTight in Action</h2>
-              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
-                <video
-                  src="/products/action/bpcinema(2).mp4"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </section>
-
         {/* Tabbed Product Info Section */}
         <div className="mb-12 sm:mb-16">
           <Tabs defaultValue="description">
@@ -485,7 +429,7 @@ export default function ProductPage() {
                 Product Description
               </TabsTrigger>
             </TabsList>
-            <TabsContent value="description" className="p-4 sm:p-6 border rounded-lg">
+            <TabsContent value="description" className="mt-0">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">The Ultimate Travel Companion</h3>
@@ -550,6 +494,25 @@ export default function ProductPage() {
             </TabsContent>
           </Tabs>
         </div>
+
+        {/* See TrekTight in Action */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">See TrekTight in Action</h2>
+              <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+                <video
+                  src="/products/action/bpcinema(2).mp4"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
 
         {/* FAQ Section */}
         <div className="mb-12 sm:mb-16">
