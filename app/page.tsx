@@ -95,18 +95,13 @@ export default function Home() {
       {/* Hero Section */}
       <div ref={heroRef} className="relative flex h-screen w-full items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <video
-            className="w-full h-full object-cover"
-            autoPlay
-            muted
-            loop
-            playsInline
-            controls={false}
-            style={{ objectFit: 'cover' }}
-          >
-            <source src="/products/hero/bpcinema(4).mp4" type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+          <iframe
+            src="https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=dikovux5f0mfcyc9ayjk&profile=cld-default"
+            className="w-full h-full"
+            allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+            allowFullScreen
+            style={{ border: 'none' }}
+          />
         </div>
         <div className="absolute inset-0 bg-black/30 z-10"></div>
 

@@ -116,7 +116,7 @@ export default function ProductPage() {
 
   const productMedia = [
     { type: 'image', src: '/products/trektight-bp/1.png', alt: 'TrekTight Backpack Main View' },
-    { type: 'video', src: '/products/trektight-bp/2.mp4', alt: 'TrekTight Backpack Demo Video' },
+    { type: 'video', src: 'https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=gesgujjocnls8b8jsgis&profile=cld-default', alt: 'TrekTight Backpack Demo Video' },
     { type: 'image', src: '/products/trektight-bp/3.png', alt: 'TrekTight Backpack Features' },
     { type: 'image', src: '/products/trektight-bp/4.png', alt: 'TrekTight Backpack Interior' },
     { type: 'image', src: '/products/trektight-bp/5.png', alt: 'TrekTight Backpack Security Features' },
@@ -148,19 +148,14 @@ export default function ProductPage() {
                 {productMedia.map((media, index) => (
                   <SwiperSlide key={index} className="flex items-center justify-center bg-white">
                     {media.type === 'video' ? (
-                      <div className="w-full h-full flex items-center justify-center">
-                        <video
-                          className="max-w-full max-h-[600px] w-auto h-auto"
-                          autoPlay
-                          playsInline
-                          loop
-                          muted
-                          controls={false}
-                          preload="metadata"
-                        >
-                          <source src={media.src} type="video/mp4" />
-                          Your browser does not support the video tag.
-                        </video>
+                      <div className="relative w-full h-full">
+                        <iframe
+                          src={media.src}
+                          className="w-full h-full"
+                          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
+                          allowFullScreen
+                          style={{ border: 'none' }}
+                        />
                       </div>
                     ) : (
                       <div className="relative w-full h-full flex items-center justify-center bg-gray-100">
