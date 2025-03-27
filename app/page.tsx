@@ -20,14 +20,18 @@ export default function Home() {
   const heroRef = useRef<HTMLDivElement>(null)
   const heroInView = useInView(heroRef, { once: false })
 
-  const { scrollYProgress } = useScroll()
-  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
-
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
-    if (ref.current) {
+    if (ref && ref.current) {
       ref.current.scrollIntoView({ behavior: 'smooth' })
     }
   }
+
+  const scrollYProgress = useScroll({
+    target: heroRef,
+    offset: ["end end", "end start"]
+  }).scrollYProgress
+
+  const opacity = useTransform(scrollYProgress, [0, 0.2], [1, 0])
 
   const features = [
     {
@@ -99,7 +103,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="relative w-full max-w-lg aspect-square"
+            className="relative w-full h-full"
           >
             <video
               src="/products/hero/bpcinema(4).mp4"
@@ -107,7 +111,7 @@ export default function Home() {
               loop
               muted
               playsInline
-              className="w-full h-full object-cover rounded-lg shadow-lg"
+              className="w-full h-full object-cover"
             />
           </motion.div>
         </div>
@@ -477,7 +481,7 @@ export default function Home() {
                 onClick={() => window.location.href = '/product'}
               >
                 <ShoppingBag className="h-5 w-5 mr-2" />
-                Add to Cart
+                Buy Now
               </motion.button>
             </div>
 

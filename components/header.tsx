@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Link from "next/link"
 import { motion } from "framer-motion"
 import { Menu, X, Mountain } from "lucide-react"
+import Image from "next/image"
 
 interface HeaderProps {
   onFeaturesClick: () => void
@@ -66,16 +67,17 @@ export default function Header({ onFeaturesClick, onComparisonClick, onReviewsCl
           >
             Reviews
           </button>
-          <motion.button
-            onClick={onBuyClick}
-            className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
-              isScrolled ? "bg-teal-500 text-white hover:bg-teal-600" : "bg-white text-gray-900 hover:bg-gray-100"
-            }`}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            Buy Now
-          </motion.button>
+          <Link href="/product">
+            <motion.button
+              className={`px-5 py-2 rounded-full text-sm font-medium transition-all ${
+                isScrolled ? "bg-teal-500 text-white hover:bg-teal-600" : "bg-white text-gray-900 hover:bg-gray-100"
+              }`}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              Buy Now
+            </motion.button>
+          </Link>
         </nav>
 
         <button className="md:hidden z-50" onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}>
@@ -115,12 +117,13 @@ export default function Header({ onFeaturesClick, onComparisonClick, onReviewsCl
             >
               Reviews
             </button>
-            <button
-              onClick={onBuyClick}
-              className="block w-full text-center px-4 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600"
-            >
-              Buy Now
-            </button>
+            <Link href="/product" className="block w-full">
+              <button
+                className="w-full text-center px-4 py-3 bg-teal-500 text-white rounded-lg hover:bg-teal-600"
+              >
+                Buy Now
+              </button>
+            </Link>
           </div>
         </motion.div>
       )}
