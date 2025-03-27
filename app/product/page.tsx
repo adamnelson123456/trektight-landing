@@ -116,7 +116,7 @@ export default function ProductPage() {
 
   const productMedia = [
     { type: 'image', src: '/products/trektight-bp/1.png', alt: 'TrekTight Backpack Main View' },
-    { type: 'video', src: 'https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=gesgujjocnls8b8jsgis&profile=cld-default', alt: 'TrekTight Backpack Demo Video' },
+    { type: 'video', src: '/products/trektight-bp/2.mp4', alt: 'TrekTight Backpack Demo Video' },
     { type: 'image', src: '/products/trektight-bp/3.png', alt: 'TrekTight Backpack Features' },
     { type: 'image', src: '/products/trektight-bp/4.png', alt: 'TrekTight Backpack Interior' },
     { type: 'image', src: '/products/trektight-bp/5.png', alt: 'TrekTight Backpack Security Features' },
@@ -149,12 +149,15 @@ export default function ProductPage() {
                   <SwiperSlide key={index} className="flex items-center justify-center bg-white">
                     {media.type === 'video' ? (
                       <div className="relative w-full h-full">
-                        <iframe
+                        <video
                           src={media.src}
                           className="w-full h-full"
-                          allow="autoplay; fullscreen; encrypted-media; picture-in-picture"
-                          allowFullScreen
-                          style={{ border: 'none' }}
+                          autoPlay
+                          loop
+                          muted
+                          playsInline
+                          poster="/products/trektight-bp/video-thumb.png"
+                          style={{ objectFit: 'contain' }}
                         />
                       </div>
                     ) : (
@@ -192,7 +195,7 @@ export default function ProductPage() {
                       {media.type === 'video' ? (
                         <div className="relative w-full h-full bg-gray-100">
                           <Image
-                            src={media.src.replace('.mp4', '-thumb.png')}
+                            src="/products/trektight-bp/video-thumb.png"
                             alt={media.alt}
                             fill
                             className="object-cover"
@@ -399,25 +402,64 @@ export default function ProductPage() {
           </div>
         </div>
 
-        {/* Product Description */}
+        {/* Product Carousel */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl font-bold mb-8 text-center">Product Description</h2>
+            <div className="max-w-4xl mx-auto">
+              <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                <Image
+                  src="/products/trektight-bp/1.png"
+                  alt="TrekTight Backpack"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+              <div className="mt-8 grid grid-cols-2 gap-4">
+                <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/products/trektight-bp/2.png"
+                    alt="TrekTight Backpack Side View"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+                <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
+                  <Image
+                    src="/products/trektight-bp/3.png"
+                    alt="TrekTight Backpack Features"
+                    fill
+                    className="object-contain"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Ultimate Travel Companion */}
+        <section className="py-16 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-bold mb-8 text-center">The Ultimate Travel Companion</h2>
               <div className="prose prose-lg mx-auto">
                 <p>
-                  The TrekTight is a revolutionary travel companion that combines the functionality of a backpack with the convenience of a fanny pack. Its innovative design features a detachable fanny pack that seamlessly integrates with the main backpack, offering unparalleled versatility for modern travelers.
+                  Experience unparalleled versatility with TrekTight's innovative features:
                 </p>
-                <p>
-                  The main backpack provides ample storage space with multiple compartments, while the detachable fanny pack offers quick access to essential items. The TrekTight's ergonomic design ensures comfort during extended wear, and its durable materials make it perfect for any adventure.
-                </p>
+                <ul>
+                  <li>Expandable design that adapts to your needs</li>
+                  <li>Premium waterproof materials</li>
+                  <li>Ergonomic comfort for extended wear</li>
+                  <li>Multiple secure compartments</li>
+                  <li>Built-in USB charging port</li>
+                </ul>
               </div>
             </div>
           </div>
         </section>
 
         {/* See TrekTight in Action */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <h2 className="text-3xl font-bold mb-8 text-center">See TrekTight in Action</h2>
