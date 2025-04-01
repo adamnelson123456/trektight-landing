@@ -19,6 +19,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import ShopifyBuyButton from "@/components/ShopifyBuyButton"
 
 export default function ProductPage() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null)
@@ -367,15 +368,7 @@ export default function ProductPage() {
 
             {/* Buy Button */}
             <div className="mb-5 sm:mb-6">
-              {/* <!-- Shopify Buy Button will be embedded here --> */}
-              <motion.button
-                onClick={scrollToTop}
-                className="w-full bg-teal-500 hover:bg-teal-600 text-white px-8 py-4 rounded-lg text-lg font-medium transition-all flex items-center justify-center"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                Buy Now
-              </motion.button>
+              <ShopifyBuyButton />
             </div>
           </div>
         </div>
