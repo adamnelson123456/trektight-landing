@@ -163,13 +163,10 @@ export default function ProductPage() {
                     ) : (
                       <div className="relative w-full h-full flex items-center justify-center bg-gray-100">
                         <div className="relative w-full h-[600px] border border-gray-200">
-                          <Image
+                          <img
                             src={media.src}
                             alt={media.alt}
-                            fill
-                            className="object-contain"
-                            priority={index === 0}
-                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                           />
                         </div>
                       </div>
@@ -194,11 +191,10 @@ export default function ProductPage() {
                     <div className="relative aspect-w-1 aspect-h-1">
                       {media.type === 'video' ? (
                         <div className="relative w-full h-full bg-gray-100">
-                          <Image
+                          <img
                             src="/products/trektight-bp/video-thumb.png"
                             alt={media.alt}
-                            fill
-                            className="object-cover"
+                            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                           />
                           <div className="absolute inset-0 flex items-center justify-center">
                             <div className="w-6 h-6 bg-white/80 rounded-full flex items-center justify-center">
@@ -207,11 +203,10 @@ export default function ProductPage() {
                           </div>
                         </div>
                       ) : (
-                        <Image
+                        <img
                           src={media.src}
                           alt={media.alt}
-                          fill
-                          className="object-cover"
+                          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                         />
                       )}
                     </div>
