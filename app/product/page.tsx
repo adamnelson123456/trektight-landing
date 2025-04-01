@@ -16,16 +16,10 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Label } from "@/components/ui/label"
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import ShopifyBuyButton from "@/components/ShopifyBuyButton"
 
 export default function ProductPage() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null)
-  const [selectedColor, setSelectedColor] = useState("black")
-  const [selectedBundle, setSelectedBundle] = useState("single")
-  const [quantity, setQuantity] = useState("1")
   const [mainImage, setMainImage] = useState("/placeholder.svg?height=600&width=600")
   const videoRef = useRef<HTMLVideoElement>(null)
   const isVideoInView = useInView(videoRef, { once: false })
@@ -277,94 +271,6 @@ export default function ProductPage() {
                 <span className="text-gray-700">Skip Baggage Fees</span>
               </li>
             </ul>
-
-            {/* Color Picker */}
-            <div className="mb-5 sm:mb-6">
-              <h3 className="text-sm font-medium text-gray-900 mb-2 sm:mb-3">Color</h3>
-              <RadioGroup value={selectedColor} onValueChange={setSelectedColor} className="flex gap-3">
-                <div className="flex items-center gap-2">
-                  <RadioGroupItem id="black" value="black" className="sr-only" />
-                  <Label
-                    htmlFor="black"
-                    className={`w-10 h-10 rounded-full bg-gray-900 cursor-pointer ${
-                      selectedColor === "black" ? "ring-2 ring-offset-2 ring-teal-500" : ""
-                    }`}
-                  />
-                </div>
-                <div className="flex items-center gap-2">
-                  <RadioGroupItem id="grey" value="grey" className="sr-only" />
-                  <Label
-                    htmlFor="grey"
-                    className={`w-10 h-10 rounded-full bg-gray-400 cursor-pointer ${
-                      selectedColor === "grey" ? "ring-2 ring-offset-2 ring-teal-500" : ""
-                    }`}
-                  />
-                </div>
-                <div className="flex items-center gap-2">
-                  <RadioGroupItem id="slate" value="slate" className="sr-only" />
-                  <Label
-                    htmlFor="slate"
-                    className={`w-10 h-10 rounded-full bg-slate-600 cursor-pointer ${
-                      selectedColor === "slate" ? "ring-2 ring-offset-2 ring-teal-500" : ""
-                    }`}
-                  />
-                </div>
-              </RadioGroup>
-            </div>
-
-            {/* Bundle Selector */}
-            <div className="mb-5 sm:mb-6">
-              <h3 className="text-sm font-medium text-gray-900 mb-2 sm:mb-3">Bundle</h3>
-              <RadioGroup
-                value={selectedBundle}
-                onValueChange={setSelectedBundle}
-                className="grid grid-cols-1 sm:grid-cols-2 gap-3"
-              >
-                <div className="flex items-center">
-                  <RadioGroupItem id="single" value="single" className="sr-only" />
-                  <Label
-                    htmlFor="single"
-                    className={`w-full p-4 border rounded-lg cursor-pointer ${
-                      selectedBundle === "single" ? "border-teal-500 bg-teal-50" : "border-gray-200"
-                    }`}
-                  >
-                    <div className="font-medium">1-Pack</div>
-                    <div className="text-sm text-gray-500">$199.99</div>
-                  </Label>
-                </div>
-                <div className="flex items-center">
-                  <RadioGroupItem id="double" value="double" className="sr-only" />
-                  <Label
-                    htmlFor="double"
-                    className={`w-full p-4 border rounded-lg cursor-pointer ${
-                      selectedBundle === "double" ? "border-teal-500 bg-teal-50" : "border-gray-200"
-                    }`}
-                  >
-                    <div className="font-medium">2-Pack</div>
-                    <div className="text-sm text-gray-500">
-                      $349.99 <span className="text-teal-600">(Save $50)</span>
-                    </div>
-                  </Label>
-                </div>
-              </RadioGroup>
-            </div>
-
-            {/* Quantity Selector */}
-            <div className="mb-5 sm:mb-6">
-              <h3 className="text-sm font-medium text-gray-900 mb-2 sm:mb-3">Quantity</h3>
-              <Select value={quantity} onValueChange={setQuantity}>
-                <SelectTrigger className="w-24">
-                  <SelectValue placeholder="Select" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="1">1</SelectItem>
-                  <SelectItem value="2">2</SelectItem>
-                  <SelectItem value="3">3</SelectItem>
-                  <SelectItem value="4">4</SelectItem>
-                  <SelectItem value="5">5</SelectItem>
-                </SelectContent>
-              </Select>
-            </div>
 
             {/* Buy Button */}
             <div className="mb-5 sm:mb-6">

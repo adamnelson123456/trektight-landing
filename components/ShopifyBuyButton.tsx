@@ -34,8 +34,8 @@ export default function ShopifyBuyButton() {
 
       window.ShopifyBuy.UI.onReady(client).then((ui: any) => {
         ui.createComponent('product', {
-          id: '8970062266598',
-          node: document.getElementById('product-component-1743529231997'),
+          id: '8978272813286',
+          node: document.getElementById('product-component-1743531047351'),
           moneyFormat: '%24%7B%7Bamount%7D%7D',
           options: {
             "product": {
@@ -100,5 +100,5 @@ export default function ShopifyBuyButton() {
     }
   }
 
-  return <div id="product-component-1743529231997"></div>
+  return <div id="product-component-1743531047351"></div>
 } 
