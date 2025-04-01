@@ -402,7 +402,7 @@ export default function ProductPage() {
               <div className="mt-8 grid grid-cols-2 gap-4">
                 <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/products/trektight-bp/2.png"
+                    src="/products/trektight-bp/3.png"
                     alt="TrekTight Backpack Side View"
                     fill
                     className="object-contain"
@@ -410,7 +410,7 @@ export default function ProductPage() {
                 </div>
                 <div className="relative aspect-square rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/products/trektight-bp/3.png"
+                    src="/products/trektight-bp/4.png"
                     alt="TrekTight Backpack Features"
                     fill
                     className="object-contain"
