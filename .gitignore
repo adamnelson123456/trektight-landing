@@ -25,8 +25,3 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-
-# video files
-public/productpage.reel/*.mp4
-public/products/action/*.mp4
-public/products/hero/*.mp4
