@@ -156,7 +156,7 @@ export default function ProductPage() {
                           loop
                           muted
                           playsInline
-                          src="https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=gesgujjocnls8b8jsgis&profile=cld-default"
+                          src="https://res.cloudinary.com/ddrhienm0/video/upload/v1711944000/gesgujjocnls8b8jsgis.mp4"
                         />
                       </div>
                     ) : (
@@ -502,7 +502,7 @@ export default function ProductPage() {
                   loop
                   muted
                   playsInline
-                  src="https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=gesgujjocnls8b8jsgis&profile=cld-default"
+                  src="https://res.cloudinary.com/ddrhienm0/video/upload/v1711944000/gesgujjocnls8b8jsgis.mp4"
                 />
               </div>
             </div>

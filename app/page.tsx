@@ -124,7 +124,7 @@ export default function Home() {
               loop
               muted
               playsInline
-              src="https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=dikovux5f0mfcyc9ayjk&profile=cld-default"
+              src="https://res.cloudinary.com/ddrhienm0/video/upload/v1711944000/dikovux5f0mfcyc9ayjk.mp4"
             />
           </motion.div>
         </div>
