@@ -463,7 +463,7 @@ export default function Home() {
               </div>
               <span className="ml-2 text-sm text-gray-600">(128 reviews)</span>
             </div>
-            <p className="text-3xl font-bold text-gray-900 mb-6">$199.99</p>
+            <p className="text-3xl font-bold text-gray-900 mb-6">$84.99</p>
 
             <ul className="space-y-3 mb-8">
               <li className="flex items-start">
@@ -471,6 +471,12 @@ export default function Home() {
                   <Check className="h-4 w-4 text-teal-600" />
                 </div>
                 <span className="text-gray-700">Free shipping worldwide</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-teal-100 p-1 rounded-full mr-3 mt-1">
+                  <Check className="h-4 w-4 text-teal-600" />
+                </div>
+                <span className="text-gray-700">Vacuum pump included</span>
               </li>
               <li className="flex items-start">
                 <div className="bg-teal-100 p-1 rounded-full mr-3 mt-1">

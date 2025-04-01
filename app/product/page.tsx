@@ -230,15 +230,15 @@ export default function ProductPage() {
             </div>
 
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
-              <span className="text-2xl sm:text-3xl font-bold text-gray-900">$199.99</span>
-              <span className="text-lg sm:text-xl text-gray-500 line-through">$249.99</span>
+              <span className="text-2xl sm:text-3xl font-bold text-gray-900">$84.99</span>
+              <span className="text-lg sm:text-xl text-gray-500 line-through">$129.99</span>
               <span className="px-2 py-1 bg-teal-100 text-teal-800 rounded text-xs sm:text-sm font-medium">
-                Save 20%
+                Save 35%
               </span>
             </div>
 
             <p className="text-xs sm:text-sm text-gray-600 mb-4 sm:mb-6">
-              Pay in 4 interest-free installments of $49.99 with ShopPay
+              Pay in 4 interest-free installments of $21.25 with ShopPay
             </p>
 
             <p className="text-base sm:text-lg font-medium text-gray-800 mb-3 sm:mb-4">
@@ -269,6 +269,12 @@ export default function ProductPage() {
                   <Check className="h-4 w-4 text-teal-600" />
                 </div>
                 <span className="text-gray-700">Skip Baggage Fees</span>
+              </li>
+              <li className="flex items-start">
+                <div className="bg-teal-100 p-1 rounded-full mr-3 mt-1">
+                  <Check className="h-4 w-4 text-teal-600" />
+                </div>
+                <span className="text-gray-700">Vacuum Pump Included</span>
               </li>
             </ul>
 
