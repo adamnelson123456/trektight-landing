@@ -2,7 +2,7 @@
 
 import type React from "react"
 
-import { useRef } from "react"
+import { useRef, useEffect } from "react"
 import Image from "next/image"
 import { motion, useScroll, useTransform, useInView } from "framer-motion"
 import { ChevronDown, Check, X, Star, ShoppingBag, Lock, Droplets, Zap, Layers, Usb, Wind } from "lucide-react"
@@ -19,6 +19,8 @@ export default function Home() {
   const buyRef = useRef<HTMLDivElement>(null)
   const heroRef = useRef<HTMLDivElement>(null)
   const heroInView = useInView(heroRef, { once: false })
+  const videoRef = useRef<HTMLVideoElement>(null)
+  const isVideoInView = useInView(videoRef)
 
   const scrollToSection = (ref: React.RefObject<HTMLDivElement | null>) => {
     if (ref && ref.current) {
@@ -87,6 +89,16 @@ export default function Home() {
     },
   ]
 
+  useEffect(() => {
+    if (videoRef.current) {
+      if (isVideoInView) {
+        videoRef.current.play()
+      } else {
+        videoRef.current.pause()
+      }
+    }
+  }, [isVideoInView])
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between bg-white">
       <Header
@@ -106,12 +118,13 @@ export default function Home() {
             className="relative w-full h-full"
           >
             <video
-              src="/products/hero/bpcinema(4).mp4"
+              ref={videoRef}
+              className="w-full h-full object-cover"
               autoPlay
               loop
               muted
               playsInline
-              className="w-full h-full object-cover"
+              src="https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=dikovux5f0mfcyc9ayjk&profile=cld-default"
             />
           </motion.div>
         </div>

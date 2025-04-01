@@ -150,14 +150,13 @@ export default function ProductPage() {
                     {media.type === 'video' ? (
                       <div className="relative w-full h-full">
                         <video
-                          src={media.src}
-                          className="w-full h-full"
+                          ref={videoRef}
+                          className="w-full h-full object-cover rounded-lg"
                           autoPlay
                           loop
                           muted
                           playsInline
-                          poster="/products/trektight-bp/video-thumb.png"
-                          style={{ objectFit: 'contain' }}
+                          src="https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=gesgujjocnls8b8jsgis&profile=cld-default"
                         />
                       </div>
                     ) : (
@@ -497,12 +496,13 @@ export default function ProductPage() {
               <h2 className="text-3xl font-bold mb-8 text-center">See TrekTight in Action</h2>
               <div className="relative aspect-video rounded-lg overflow-hidden shadow-lg">
                 <video
-                  src="/products/action/bpcinema(2).mp4"
+                  ref={videoRef}
+                  className="w-full h-full object-cover rounded-lg"
                   autoPlay
                   loop
                   muted
                   playsInline
-                  className="w-full h-full object-cover"
+                  src="https://player.cloudinary.com/embed/?cloud_name=ddrhienm0&public_id=gesgujjocnls8b8jsgis&profile=cld-default"
                 />
               </div>
             </div>
